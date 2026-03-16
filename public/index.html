@@ -38,6 +38,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Caelis Engine — motor astronómico hermético de precisión. VSOP87, ELP/Meeus, nodos lunares, Atacir, proyección estereográfica polar.">
 <meta name="version" content="1.5.0">
+
+<!-- PWA — manifest -->
+<link rel="manifest" href="./manifest.json">
+
+<!-- iOS — instalación como app nativa -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Caelis">
+<link rel="apple-touch-icon" href="./assets/icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="152x152" href="./assets/icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/icon-192.png">
+
+<!-- Desktop — theme color -->
+<meta name="theme-color" content="#06040f">
+<meta name="msapplication-TileColor" content="#06040f">
+
+<!-- Open Graph — compartir en redes -->
+<meta property="og:title" content="Caelis Engine — Motor Astronómico Hermético">
+<meta property="og:description" content="Instrumento de precisión astronómica. VSOP87, ELP2000, Atacir, proyección estereográfica polar.">
+<meta property="og:image" content="./assets/icons/icon-512.png">
+<meta property="og:type" content="website">
+
 <title>Caelis Engine 1.5 — Hermetica Labs</title>
 <style>
 *{box-sizing:border-box;}
@@ -6625,6 +6647,16 @@ window.addEventListener("DOMContentLoaded", ()=>{
     <div id="_bodyModalDesc"></div>
   </div>
 </div>
+<!-- ═══ PWA — Service Worker (caelis-web exclusivo) ═══ -->
+<script>
+if('serviceWorker' in navigator){
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js')
+      .then(reg => console.log('[Caelis Web] SW registrado:', reg.scope))
+      .catch(err => console.warn('[Caelis Web] SW error:', err));
+  });
+}
+</script>
 
 </body>
 </html>

@@ -1,0 +1,18 @@
+{
+  "name": "caelis-web",
+  "version": "1.5.0",
+  "description": "Caelis Engine — Progressive Web App con lectura IA del Atacir",
+  "private": true,
+  "scripts": {
+    "sync": "powershell -Command \"Copy-Item '../caelis-engine/caelis_engine_1_5.html' -Destination './public/index.html' -Force\"",
+    "dev": "npx serve public -p 3000",
+    "worker:dev": "npx wrangler dev worker/index.js",
+    "worker:deploy": "npx wrangler deploy worker/index.js"
+  },
+  "author": "Cristian Valeria Bravo <hermeticalabs.dev@proton.me>",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HermeticaLabs/caelis-web.git"
+  }
+}

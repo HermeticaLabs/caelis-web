@@ -9,7 +9,7 @@
   Proyecto:  Hermetica Labs
   Repositorio: github.com/HermeticaLabs/caelis-engine
   Creado:    2024
-  Versión:   1.5.0
+  Versión:   2.0.0
   Fecha:     2026-03-11
 
   © 2024–2026 Cristian Valeria Bravo / Hermetica Labs
@@ -37,8 +37,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Caelis Engine — motor astronómico hermético de precisión. VSOP87, ELP/Meeus, nodos lunares, Atacir, proyección estereográfica polar.">
-<meta name="version" content="1.5.0">
-<title>Caelis Engine 1.5 — Hermetica Labs</title>
+<meta name="version" content="2.0.0">
+<title>Caelis Engine 2.0 — Hermetica Labs</title>
 <style>
 *{box-sizing:border-box;}
 body{margin:0;background:#000;overflow:hidden;font-family:'Georgia',serif;}
@@ -686,7 +686,7 @@ button:hover{background:rgba(255,255,255,0.18);}
   <hr>
 
   <div class="legend">
-    <strong>AstroSync</strong> · Caelis Engine 1.5
+    <strong>AstroSync</strong> · Caelis Engine 2.0
   </div>
 </div>
 
@@ -4230,7 +4230,7 @@ function exportarJSON(){
 
   // Construir objeto limpio y legible
   let out = {
-    motor:   "Caelis Engine 1.5",
+    motor:   "Caelis Engine 2.0",
     version: _isPremium ? "premium" : "free",
     exportado: new Date().toISOString(),
 
@@ -4424,7 +4424,7 @@ function exportarTexto(){
   }
 
   t.push(`  Exportado: ${new Date().toISOString()}`);
-  t.push("  Motor: Caelis Engine 1.5 — VSOP87 / ELP-Meeus");
+  t.push("  Motor: Caelis Engine 2.0 — VSOP87 / ELP-Meeus");
   t.push("");
 
   let texto = t.join("\n");
@@ -5608,7 +5608,7 @@ function syncTransitoNow(){
 
 window.AstroSync = {
   name:    "Caelis Engine",
-  version: "1.5.0",
+  version: "2.0.0",
   getSnapshot,
   getSnapshotAt,
   julianDate,
@@ -6324,7 +6324,7 @@ function drawAstrolabio(){
   ctx.font="11px Georgia";
   ctx.fillStyle="rgba(255,255,255,0.18)";
   ctx.textAlign="right"; ctx.textBaseline="bottom";
-  ctx.fillText("Caelis Engine 1.5 · Astrolabio", canvas.width-16, canvas.height-12);
+  ctx.fillText("Caelis Engine 2.0 · Astrolabio", canvas.width-16, canvas.height-12);
   ctx.restore();
 
   timeOffset+=timeSpeed*(1/60);
@@ -6334,7 +6334,7 @@ function drawAstrolabio(){
 
 
 // ══════════════════════════════════════════════════════════════════
-// ASPECTOS ASTROLÓGICOS — Caelis Engine 1.5
+// ASPECTOS ASTROLÓGICOS — Caelis Engine 2.0
 // ══════════════════════════════════════════════════════════════════
 
 const ASPECTOS_VIS = [
@@ -6610,7 +6610,7 @@ function draw(){
   ctx.fillStyle="rgba(255,255,255,0.18)";
   ctx.textAlign="right";
   ctx.textBaseline="bottom";
-  ctx.fillText("Caelis Engine 1.5", canvas.width-16, canvas.height-12);
+  ctx.fillText("Caelis Engine 2.0", canvas.width-16, canvas.height-12);
   ctx.restore();
 
   timeOffset+=timeSpeed*(1/60);
@@ -6622,7 +6622,7 @@ draw();
 initLocation();
 
 // ══════════════════════════════════════════════════════════════════
-// TRANSFORMARE ASTRALIS — Caelis Engine 1.5
+// TRANSFORMARE ASTRALIS — Caelis Engine 2.0
 // ══════════════════════════════════════════════════════════════════
 
 const PHI = 1.61803398875;
@@ -6932,7 +6932,7 @@ function animateFlash(onDone){
 }
 
 // ══════════════════════════════════════════════════════════════════
-// OCULUS 3D ENGINE — Three.js  (Caelis Engine 1.5)
+// OCULUS 3D ENGINE — Three.js  (Caelis Engine 2.0)
 // ══════════════════════════════════════════════════════════════════
 
 // ── Paletas de color (fiel al OCULUS original) ───────────────────
